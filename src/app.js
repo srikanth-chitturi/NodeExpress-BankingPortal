@@ -8,7 +8,7 @@ console.log(`Setting views Directory :  ${path.join(__dirname + '/views')} `);
 app.set('views',path.join(__dirname + '/views'));
 app.set('view engine','ejs');
 
-app.set(express.static('public'));
+app.use(express.static(path.join(__dirname + '/public')));
 
 
 app.get('/',function(req,res){
